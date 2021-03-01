@@ -34,12 +34,9 @@
   &__menu {
     @include layout.flex-center;
     font-weight: var.$font-400;
-    @include response.min-width-breakpoints(laptop) {
-      display: flex;
-    }
+    display: flex;
 
     @include response.max-width-breakpoints(laptop) {
-      display: flex;
       position: absolute;
       top: 10rem;
       left: 0;
