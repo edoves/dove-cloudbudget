@@ -1,0 +1,20 @@
+{
+  "name": "cloudbudget",
+  "version": "1.0.0",
+  "description": "This webpage took its original design from a dribble which can be found [here](https://www.figmacrush.com/business-landing-page-figma-template/). Converted it to code with HTML,CSS/SASS, JavaScript technology.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edoves/dove-cloudbudget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edoves/dove-cloudbudget/issues"
+  },
+  "homepage": "https://github.com/edoves/dove-cloudbudget#readme"
+}
