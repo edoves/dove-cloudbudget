@@ -16,6 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": "last 10 versions",
   "bugs": {
     "url": "https://github.com/edoves/dove-cloudbudget/issues"
   },
