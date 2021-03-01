@@ -38,6 +38,14 @@ img {
   margin: 0 auto;
 }
 
+h2 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+}
+
+.col-2 {
+  flex: 1 1 40rem;
+}
+
 .navbar {
   font-size: 1.4rem;
   color: #fff;
@@ -176,6 +184,10 @@ img {
 }
 .header__text .btn--text--colored {
   color: #ed4c5c;
+}
+
+.manage {
+  padding: 8rem 0;
 }
 
 .btn {
