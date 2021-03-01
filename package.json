@@ -1,10 +1,13 @@
 {
   "name": "cloudbudget",
   "version": "1.0.0",
-  "description": "This webpage took its original design from a dribble which can be found [here](https://www.figmacrush.com/business-landing-page-figma-template/). Converted it to code with HTML,CSS/SASS, JavaScript technology.",
+  "description": "Converting UI design from figma to HTML,CSS,Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-run-all --parallel devserver watch:scss",
+    "devserver": "live-server",
+    "watch:scss": "sass scss/style.scss:css/style.css --watch",
+    "build": "postcss css/style.css --use autoprefixer -d css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/edoves/dove-cloudbudget/issues"
   },
-  "homepage": "https://github.com/edoves/dove-cloudbudget#readme"
+  "homepage": "https://github.com/edoves/dove-cloudbudget#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.32.8"
+  }
 }

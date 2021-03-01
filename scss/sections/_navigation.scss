@@ -1,7 +1,121 @@
-@use '../abstracts/variables' as var;
+@use '../abstracts/' as var;
+@use '../layout/layouts' as layout;
+@use '../layout/mediaquery' as response;
 
 .navbar {
   font-size: 1.4rem;
   color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  @include layout.flex-sb;
+  padding-top: 5rem;
+  padding-bottom: 1.7rem;
   transition: transform 1s;
+
+  &__logo {
+    a {
+      font-size: 1.6rem;
+      color: #fff;
+      display: flex;
+      @include layout.flex-center;
+    }
+
+    img {
+      width: 3rem;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-weight: var.$font-700;
+      margin-left: 0.652rem;
+    }
+  }
+
+  &__menu {
+    @include layout.flex-center;
+    font-weight: var.$font-400;
+    @include response.min-width-breakpoints(laptop) {
+      display: flex;
+    }
+
+    @include response.max-width-breakpoints(laptop) {
+      display: flex;
+      position: absolute;
+      top: 10rem;
+      left: 0;
+      right: 0;
+      bottom: 20rem;
+      width: 80%;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      opacity: 0;
+      transition: all 0.5s ease;
+      transform: translateY(6rem);
+    }
+
+    li {
+      margin: 1rem;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+      }
+      &:nth-child(6) {
+        @include response.min-width-breakpoints(laptop) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__location {
+    display: none;
+    font-weight: var.$font-400;
+    @include response.min-width-breakpoints(laptop) {
+      display: flex;
+    }
+    li {
+      a {
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    @include response.max-width-breakpoints(laptop) {
+      display: flex;
+    }
+
+    span {
+      display: block;
+      background: #fff;
+      width: 2rem;
+      height: 0.265rem;
+      margin-top: 0.265rem;
+      margin-bottom: 0.265rem;
+      transition: all 250ms ease;
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          margin: 8px auto;
+          transform: translateY(13px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          margin: 8px auto;
+          transform: translateY(-13px) rotate(-45deg);
+        }
+      }
+    }
+  }
 }

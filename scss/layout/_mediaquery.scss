@@ -1,0 +1,28 @@
+//480px, 768px, 1025px, 1200px
+$min-width-breakpoints: (
+  "mobile": "25em",
+  "tablet": "48em",
+  "laptop": "64em",
+  "desktop": "75.5em",
+);
+
+//375,479px 767px, 1024px, 1199px
+$max-width-breakpoints: (
+  "iphone5": "23.438em",
+  "mobile": "25.938em",
+  "tablet": "47.938em",
+  "laptop": "63.063em",
+  "desktop": "74.938em",
+);
+
+@mixin min-width-breakpoints($size) {
+  @media only screen and (min-width: map-get($min-width-breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin max-width-breakpoints($size) {
+  @media only screen and (max-width: map-get($max-width-breakpoints, $size)) {
+    @content;
+  }
+}
