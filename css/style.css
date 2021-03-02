@@ -52,13 +52,27 @@ img {
   font-size: clamp(1.8rem, 1vw, 2rem);
 }
 
-@keyframes moveIn {
+@keyframes moveInLeft {
   0% {
     transform: translateX(-100px);
     opacity: 0;
   }
   80% {
     transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(10px);
     opacity: 0;
   }
   100% {
@@ -220,7 +234,7 @@ img {
   padding: 8rem 0;
 }
 .manage__text {
-  animation: moveIn 1.5s forwards 0s linear;
+  animation: moveInLeft 1.5s forwards 0s linear;
 }
 @media only screen and (min-width: 64em) {
   .manage__text {
@@ -233,6 +247,7 @@ img {
   }
 }
 .manage__video {
+  animation: moveInRight 1.5s forwards 0s linear;
   position: relative;
 }
 .manage__video img {

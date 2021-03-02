@@ -6,7 +6,7 @@
   padding: 8rem 0;
 
   &__text {
-    animation: animate.$moveIn;
+    animation: animate.$moveInLeft;
     @include response.min-width-breakpoints(laptop) {
       padding-right: 8rem;
     }
@@ -16,6 +16,7 @@
   }
 
   &__video {
+    animation: animate.$moveInRight;
     position: relative;
     img {
       border-radius: 2rem;
