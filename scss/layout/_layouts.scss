@@ -23,6 +23,13 @@
       align-items: center;
     } @else if($col == threeCol) {
       @include flex-sb;
+    } @else if($col == fourCol) {
+      justify-content: space-between;
+      align-items: flex-start;
+      @include response.max-width-breakpoints(laptop) {
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
@@ -37,5 +44,16 @@
   }
   @include response.min-width-breakpoints(desktop) {
     flex: 0 1 calc(100% / 3 - 1.5rem);
+  }
+}
+
+.col-4 {
+  @include response.min-width-breakpoints(tablet) {
+    flex: 1 1 40%;
+  }
+
+  @include response.min-width-breakpoints(desktop) {
+    max-width: 20rem;
+    flex: 1 1 20%;
   }
 }

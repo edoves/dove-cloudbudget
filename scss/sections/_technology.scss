@@ -1,0 +1,7 @@
+@use '../layout/layouts' as flex;
+
+.technology {
+  padding: 5rem 0;
+
+  @include flex.flex-layout(fourCol);
+}
