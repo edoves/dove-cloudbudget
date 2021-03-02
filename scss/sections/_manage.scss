@@ -1,3 +1,53 @@
+@use '../abstracts/' as var;
+@use '../base/animations' as animate;
+@use '../layout/mediaquery' as response;
+
 .manage {
   padding: 8rem 0;
+
+  &__text {
+    animation: animate.$moveIn;
+    @include response.min-width-breakpoints(laptop) {
+      padding-right: 8rem;
+    }
+    @include response.max-width-breakpoints(laptop) {
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__video {
+    position: relative;
+    img {
+      border-radius: 2rem;
+    }
+  }
+
+  &__video-play {
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+
+    @include response.min-width-breakpoints(tablet) {
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    @include response.max-width-breakpoints(laptop) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .fa-play {
+      background: var.$link-text-color;
+      color: #fff;
+      width: 8rem;
+      height: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5rem;
+    }
+  }
 }
