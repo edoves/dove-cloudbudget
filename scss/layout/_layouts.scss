@@ -1,3 +1,5 @@
+@use 'mediaquery' as response;
+
 @mixin flex-center {
   align-items: center;
   justify-content: center;
@@ -16,9 +18,18 @@
 .d-flex-layout {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  @include flex-sb;
 }
 
 .col-2 {
   flex: 1 1 40rem;
+}
+
+.col-3 {
+  @include response.min-width-breakpoints(tablet) {
+    flex: 0 1 calc(100% / 2 - 1.5rem);
+  }
+  @include response.min-width-breakpoints(desktop) {
+    flex: 0 1 calc(100% / 3 - 1.5rem);
+  }
 }

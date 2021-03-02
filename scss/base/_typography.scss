@@ -1,24 +1,22 @@
 @use '../abstracts/' as var;
 
-@mixin lead($col) {
-  @if ($col == two) {
-    font-size: clamp(1.8rem, 1vw, 2rem);
-  } @else if ($col == three) {
-    font-size: 1.6rem;
-  }
-}
-
 .heading-h2 {
   font-size: clamp(2.6rem, 5vw, 4rem);
 }
 
 .p-line {
-  @include lead(two);
+  font-size: clamp(1.8rem, 1vw, 2rem);
 }
 
-.link {
-  text-transform: capitalize;
-  color: var.$link-text-color;
-  display: block;
-  @include lead(two);
+@mixin linkTag($col) {
+  .link {
+    text-transform: capitalize;
+    color: var.$link-text-color;
+    display: block;
+    @if ($col == two) {
+      font-size: clamp(1.8rem, 1vw, 2rem);
+    } @else if($col== three) {
+      font-size: 1.6rem;
+    }
+  }
 }

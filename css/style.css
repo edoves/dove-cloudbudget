@@ -37,18 +37,16 @@ img {
   margin: 0 auto;
 }
 
+.section__header {
+  text-align: center;
+  margin: 5rem 0;
+}
+
 .heading-h2 {
   font-size: clamp(2.6rem, 5vw, 4rem);
 }
 
 .p-line {
-  font-size: clamp(1.8rem, 1vw, 2rem);
-}
-
-.link {
-  text-transform: capitalize;
-  color: #ed4c5c;
-  display: block;
   font-size: clamp(1.8rem, 1vw, 2rem);
 }
 
@@ -83,11 +81,23 @@ img {
 .d-flex-layout {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
 .col-2 {
   flex: 1 1 40rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .col-3 {
+    flex: 0 1 calc(100% / 2 - 1.5rem);
+  }
+}
+@media only screen and (min-width: 75.5em) {
+  .col-3 {
+    flex: 0 1 calc(100% / 3 - 1.5rem);
+  }
 }
 
 .navbar {
@@ -282,6 +292,17 @@ img {
   justify-content: center;
   border-radius: 5rem;
 }
+.manage .link {
+  text-transform: capitalize;
+  color: #ed4c5c;
+  display: block;
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+
+.featured {
+  padding: 8rem 0;
+  background: #fafafa;
+}
 
 .btn {
   padding: 1rem 3rem;
@@ -289,6 +310,36 @@ img {
   text-transform: uppercase;
   color: #fff;
   font-size: 1.4rem;
+}
+
+.featured__post {
+  position: relative;
+  font-size: 1.6rem;
+  margin-bottom: 14rem;
+}
+.featured__post img {
+  border-radius: 1rem;
+}
+.featured__post .text-content {
+  position: absolute;
+  background: #fff;
+  left: 0;
+  right: 0;
+  bottom: -10rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.featured__post .link {
+  text-transform: capitalize;
+  color: #ed4c5c;
+  display: block;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
