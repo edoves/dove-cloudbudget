@@ -2,9 +2,12 @@
 @use '../base/animations' as animate;
 @use '../base/typography' as a;
 @use '../layout/mediaquery' as response;
+@use '../layout/layouts' as flex;
 
 .manage {
   padding: 8rem 0;
+
+  @include flex.flex-layout(twoCol);
 
   &__text {
     animation: animate.$moveInLeft;
