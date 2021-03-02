@@ -18,7 +18,6 @@ body {
 
 a {
   text-decoration: none;
-  transition: all 0.2s ease-in;
 }
 
 ul {
@@ -38,8 +37,25 @@ img {
   margin: 0 auto;
 }
 
-h2 {
+.heading-h2 {
   font-size: clamp(2.6rem, 5vw, 4rem);
+}
+
+.p-line {
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+
+.link {
+  text-transform: capitalize;
+  color: #ed4c5c;
+  display: block;
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+
+.d-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .col-2 {

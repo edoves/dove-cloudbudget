@@ -13,6 +13,12 @@
   align-items: center;
 }
 
+.d-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .col-2 {
   flex: 1 1 40rem;
 }
