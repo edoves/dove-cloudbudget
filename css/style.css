@@ -397,7 +397,11 @@ img {
   flex-wrap: wrap;
   font-size: clamp(1.8rem, 1vw, 2rem);
 }
-
+.footer__widget {
+  margin: 0 1rem 1rem;
+  max-width: 20rem;
+  flex: 1 1 40%;
+}
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;

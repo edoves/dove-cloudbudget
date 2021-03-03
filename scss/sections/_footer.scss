@@ -6,4 +6,16 @@
     flex-wrap: wrap;
     font-size: clamp(1.8rem, 1vw, 2rem);
   }
+
+  &__widget {
+    margin: 0 1rem 1rem;
+    max-width: 20rem;
+    flex: 1 1 40%;
+  }
+
+  &__widget-social {
+  }
+
+  &__creds {
+  }
 }
