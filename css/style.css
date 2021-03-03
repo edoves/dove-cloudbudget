@@ -336,6 +336,37 @@ img {
   }
 }
 
+.app {
+  padding: 8rem 0;
+  background: #ed4c5c;
+  color: #fff;
+}
+.app .d-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media only screen and (min-width: 64em) {
+  .app__text {
+    padding-right: 8rem;
+  }
+}
+@media only screen and (max-width: 63.063em) {
+  .app__text {
+    padding-bottom: 6rem;
+  }
+}
+.app__social {
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+.app__social a {
+  color: #fff;
+  margin-right: 2rem;
+}
+.app__video-slider img {
+  border-radius: 2rem;
+}
+
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;

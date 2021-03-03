@@ -1,0 +1,34 @@
+@use '../abstracts/' as var;
+@use '../layout/mediaquery' as response;
+@use '../layout/layouts' as flex;
+
+.app {
+  padding: 8rem 0;
+  background: var.$link-text-color;
+  color: #fff;
+
+  @include flex.flex-layout(twoCol);
+
+  &__text {
+    @include response.min-width-breakpoints(laptop) {
+      padding-right: 8rem;
+    }
+    @include response.max-width-breakpoints(laptop) {
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__social {
+    font-size: clamp(1.8rem, 1vw, 2rem);
+    a {
+      color: #fff;
+      margin-right: 2rem;
+    }
+  }
+
+  &__video-slider {
+    img {
+      border-radius: 2rem;
+    }
+  }
+}
