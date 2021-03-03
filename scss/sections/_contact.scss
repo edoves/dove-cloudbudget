@@ -1,0 +1,23 @@
+@use '../layout/layouts' as flex;
+@use '../layout/mediaquery' as response;
+.contact {
+  padding: 8rem 0;
+
+  .d-flex-layout {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  &__text {
+    @include response.min-width-breakpoints(laptop) {
+      padding-right: 8rem;
+    }
+    @include response.max-width-breakpoints(laptop) {
+      padding-bottom: 6rem;
+    }
+  }
+}

@@ -367,6 +367,27 @@ img {
   border-radius: 2rem;
 }
 
+.contact {
+  padding: 8rem 0;
+}
+.contact .d-flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact h2 {
+  margin: 0;
+}
+@media only screen and (min-width: 64em) {
+  .contact__text {
+    padding-right: 8rem;
+  }
+}
+@media only screen and (max-width: 63.063em) {
+  .contact__text {
+    padding-bottom: 6rem;
+  }
+}
+
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;
@@ -440,6 +461,43 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.contact__form .form input,
+.contact__form .form select,
+.contact__form .form option {
+  color: #132743;
+}
+.contact__form .form input,
+.contact__form .form select {
+  width: 100%;
+  padding: 2rem 1.8rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #333333;
+  outline: none;
+}
+.contact__form .form select {
+  appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+  background-position-x: 97%;
+}
+.contact__form .form__col-2-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact__form .form__col-2-input .col {
+  flex: 0 1 48%;
+}
+.contact__form .form__input {
+  margin-bottom: 2rem;
+}
+.contact__form .form__btn {
+  cursor: pointer;
+  display: block;
+  background: #ed4c5c;
+  border: none;
+  padding: 2rem 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
