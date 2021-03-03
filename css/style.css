@@ -402,6 +402,39 @@ img {
   max-width: 20rem;
   flex: 1 1 40%;
 }
+@media only screen and (max-width: 74.938em) {
+  .footer__widget {
+    max-width: 40rem;
+  }
+}
+@media only screen and (max-width: 47.938em) {
+  .footer__widget {
+    flex: 1 1 50%;
+  }
+}
+@media only screen and (min-width: 25em) {
+  .footer__widget img {
+    width: auto;
+  }
+}
+.footer__widget-links li a {
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 0.352rem;
+}
+.footer__widget-social {
+  display: flex;
+}
+.footer__widget-social li {
+  padding-right: 2rem;
+}
+.footer__widget-social li a {
+  color: #101010;
+  transition: all 250ms ease;
+}
+.footer__widget-social li a:hover {
+  color: #ee3d1b;
+}
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;

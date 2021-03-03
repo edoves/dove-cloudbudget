@@ -1,3 +1,5 @@
+@use '../abstracts/' as var;
+@use '../layout/mediaquery' as response;
 .footer {
   background: #fafafa;
   &__widgets {
@@ -11,9 +13,44 @@
     margin: 0 1rem 1rem;
     max-width: 20rem;
     flex: 1 1 40%;
+
+    @include response.max-width-breakpoints(desktop) {
+      max-width: 40rem;
+    }
+
+    @include response.max-width-breakpoints(tablet) {
+      flex: 1 1 50%;
+    }
+
+    img {
+      @include response.min-width-breakpoints(mobile) {
+        width: auto;
+      }
+    }
+  }
+
+  &__widget-links {
+    li {
+      a {
+        display: block;
+        text-transform: capitalize;
+        margin-bottom: 0.352rem;
+      }
+    }
   }
 
   &__widget-social {
+    display: flex;
+    li {
+      padding-right: 2rem;
+      a {
+        color: #101010;
+        transition: all 250ms ease;
+        &:hover {
+          color: var.$primary-color;
+        }
+      }
+    }
   }
 
   &__creds {
