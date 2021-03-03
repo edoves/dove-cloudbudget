@@ -388,6 +388,16 @@ img {
   }
 }
 
+.footer {
+  background: #fafafa;
+}
+.footer__widgets {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: clamp(1.8rem, 1vw, 2rem);
+}
+
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;
