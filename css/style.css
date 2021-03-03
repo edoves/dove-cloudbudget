@@ -435,6 +435,20 @@ img {
 .footer__widget-social li a:hover {
   color: #ee3d1b;
 }
+.footer__creds {
+  font-size: clamp(1.8rem, 1vw, 2rem);
+  padding: 3rem 0;
+}
+@media only screen and (max-width: 63.063em) {
+  .footer__creds {
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+.footer__creds p {
+  margin: 0;
+}
+
 .btn {
   padding: 1rem 3rem;
   border-radius: 0.652rem;

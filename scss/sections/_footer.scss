@@ -54,5 +54,16 @@
   }
 
   &__creds {
+    font-size: clamp(1.8rem, 1vw, 2rem);
+    padding: 3rem 0;
+
+    @include response.max-width-breakpoints(laptop) {
+      padding-top: 2rem;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
