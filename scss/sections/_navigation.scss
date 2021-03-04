@@ -53,6 +53,13 @@
       transform: translateY(6rem);
     }
 
+    &.openMenuMobile {
+      background: rgba(19, 19, 19, 0.8);
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
     li {
       margin: 1rem;
       a {
