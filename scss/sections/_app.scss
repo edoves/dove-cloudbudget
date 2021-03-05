@@ -10,6 +10,7 @@
   @include flex.flex-layout(twoCol);
 
   &__text {
+    transform: translateX(-8rem);
     @include response.min-width-breakpoints(laptop) {
       padding-right: 8rem;
     }
@@ -27,8 +28,21 @@
   }
 
   &__video-slider {
+    transform: translateX(8rem);
     img {
       border-radius: 2rem;
     }
+  }
+
+  &__text,
+  &__video-slider {
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  &__text.animate_in,
+  &__video-slider.animate_in {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

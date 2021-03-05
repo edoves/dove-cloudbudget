@@ -12,8 +12,9 @@ const navAnimation = (() => {
 // AnimateWhenSCroll
 const animateWhenScroll = (() => {
   const EL_TO_ANIMATE = {
-    featurePostEl: document.querySelectorAll(".featured__post"),
+    featureItems: document.querySelectorAll(".featured__post"),
     techItems: document.querySelectorAll(".technology__item"),
+    appItems: document.querySelectorAll(".animate"),
   };
 
   const FEATURED = {
@@ -28,12 +29,18 @@ const animateWhenScroll = (() => {
     threshold: 0.25,
   };
 
+  const APP = {
+    root: null,
+    rootMargin: "-250px 0px",
+    threshold: 0.25,
+  };
+
   const FEATUREDOBSERVER = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
       if (!isIntersecting) {
         return;
       } else {
-        EL_TO_ANIMATE.featurePostEl.forEach((post) => {
+        EL_TO_ANIMATE.featureItems.forEach((post) => {
           post.classList.add("animate_up");
         });
       }
@@ -52,6 +59,19 @@ const animateWhenScroll = (() => {
     });
   }, TECHNOLOGY);
 
+  const APPOBSERVER = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting }) => {
+      if (!isIntersecting) {
+        return;
+      } else {
+        EL_TO_ANIMATE.appItems.forEach((post) => {
+          post.classList.add("animate_in");
+        });
+      }
+    });
+  }, APP);
+
   FEATUREDOBSERVER.observe(document.querySelector(".featured"));
   TECHNOLOGYOBSERVER.observe(document.querySelector(".technology"));
+  APPOBSERVER.observe(document.querySelector(".app"));
 })();

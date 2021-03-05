@@ -352,6 +352,9 @@ img {
   flex-wrap: wrap;
   align-items: center;
 }
+.app__text {
+  transform: translateX(-8rem);
+}
 @media only screen and (min-width: 64em) {
   .app__text {
     padding-right: 8rem;
@@ -369,8 +372,19 @@ img {
   color: #fff;
   margin-right: 2rem;
 }
+.app__video-slider {
+  transform: translateX(8rem);
+}
 .app__video-slider img {
   border-radius: 2rem;
+}
+.app__text, .app__video-slider {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.app__text.animate_in, .app__video-slider.animate_in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .contact {
