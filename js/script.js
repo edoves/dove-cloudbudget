@@ -9,27 +9,49 @@ const navAnimation = (() => {
   });
 })();
 
-const animateOnScroll = (() => {
-  const featurePostEl = document.querySelectorAll(".featured__post");
-  const FEATUREDPOSTOPTIONS = {
+// AnimateWhenSCroll
+const animateWhenScroll = (() => {
+  const EL_TO_ANIMATE = {
+    featurePostEl: document.querySelectorAll(".featured__post"),
+    techItems: document.querySelectorAll(".technology__item"),
+  };
+
+  const FEATURED = {
     root: null,
     rootMargin: "-250px 0px",
     threshold: 0.25,
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    console.log(entries);
+  const TECHNOLOGY = {
+    root: null,
+    rootMargin: "-250px 0px",
+    threshold: 0.25,
+  };
+
+  const FEATUREDOBSERVER = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
       if (!isIntersecting) {
         return;
       } else {
-        console.log("execute");
-        featurePostEl.forEach((post) => {
+        EL_TO_ANIMATE.featurePostEl.forEach((post) => {
           post.classList.add("animate_up");
         });
       }
     });
-  }, FEATUREDPOSTOPTIONS);
+  }, FEATURED);
 
-  observer.observe(document.querySelector(".featured"));
+  const TECHNOLOGYOBSERVER = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting }) => {
+      if (!isIntersecting) {
+        return;
+      } else {
+        EL_TO_ANIMATE.techItems.forEach((post) => {
+          post.classList.add("animate_up");
+        });
+      }
+    });
+  }, TECHNOLOGY);
+
+  FEATUREDOBSERVER.observe(document.querySelector(".featured"));
+  TECHNOLOGYOBSERVER.observe(document.querySelector(".technology"));
 })();

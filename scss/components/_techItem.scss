@@ -4,9 +4,11 @@
   text-align: center;
   font-size: clamp(1.8rem, 1vw, 2rem);
   position: relative;
-
   margin: 8rem 1rem 1rem;
   padding: 1rem;
+  opacity: 0;
+  transform: translateY(8rem);
+  transition: all 1s ease;
 
   .fas {
     color: var.$link-text-color;
@@ -41,5 +43,26 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  }
+
+  &.animate_up {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  &:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  &:nth-child(4) {
+    transition-delay: 0.4s;
   }
 }
