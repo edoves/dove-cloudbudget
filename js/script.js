@@ -21,7 +21,8 @@ const animateWhenScroll = (() => {
   const OPTIONS = {
     root: null,
     rootMargin: "-250px 0px",
-    threshold: 0.25,
+    // Callback will be fired 30 times during intersection
+    threshold: [...Array(30).keys()].map((x) => x / 29),
   };
 
   const FEATUREDOBSERVER = new IntersectionObserver((entries) => {

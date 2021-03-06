@@ -6,6 +6,7 @@
   padding: 8rem 0;
   background: var.$link-text-color;
   color: #fff;
+  overflow: hidden;
 
   @include flex.flex-layout(twoCol);
 

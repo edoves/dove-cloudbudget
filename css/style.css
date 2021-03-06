@@ -346,6 +346,7 @@ img {
   padding: 8rem 0;
   background: #ed4c5c;
   color: #fff;
+  overflow: hidden;
 }
 .app .d-flex-layout {
   display: flex;
@@ -389,6 +390,7 @@ img {
 
 .contact {
   padding: 8rem 0;
+  overflow: hidden;
 }
 .contact .d-flex-layout {
   display: flex;
