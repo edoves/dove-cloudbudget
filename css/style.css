@@ -397,6 +397,9 @@ img {
 .contact h2 {
   margin: 0;
 }
+.contact__text {
+  transform: translateX(-8rem);
+}
 @media only screen and (min-width: 64em) {
   .contact__text {
     padding-right: 8rem;
@@ -406,6 +409,17 @@ img {
   .contact__text {
     padding-bottom: 6rem;
   }
+}
+.contact__form {
+  transform: translateX(8rem);
+}
+.contact__text, .contact__form {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.contact__text.animate_in, .contact__form.animate_in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .footer {

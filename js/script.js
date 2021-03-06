@@ -14,22 +14,11 @@ const animateWhenScroll = (() => {
   const EL_TO_ANIMATE = {
     featureItems: document.querySelectorAll(".featured__post"),
     techItems: document.querySelectorAll(".technology__item"),
-    appItems: document.querySelectorAll(".animate"),
+    appItems: document.querySelectorAll(".animate-app"),
+    contactItems: document.querySelectorAll(".animate-contact"),
   };
 
-  const FEATURED = {
-    root: null,
-    rootMargin: "-250px 0px",
-    threshold: 0.25,
-  };
-
-  const TECHNOLOGY = {
-    root: null,
-    rootMargin: "-250px 0px",
-    threshold: 0.25,
-  };
-
-  const APP = {
+  const OPTIONS = {
     root: null,
     rootMargin: "-250px 0px",
     threshold: 0.25,
@@ -45,33 +34,46 @@ const animateWhenScroll = (() => {
         });
       }
     });
-  }, FEATURED);
+  }, OPTIONS);
 
   const TECHNOLOGYOBSERVER = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
       if (!isIntersecting) {
         return;
       } else {
-        EL_TO_ANIMATE.techItems.forEach((post) => {
-          post.classList.add("animate_up");
+        EL_TO_ANIMATE.techItems.forEach((tech) => {
+          tech.classList.add("animate_up");
         });
       }
     });
-  }, TECHNOLOGY);
+  }, OPTIONS);
 
   const APPOBSERVER = new IntersectionObserver((entries) => {
     entries.forEach(({ isIntersecting }) => {
       if (!isIntersecting) {
         return;
       } else {
-        EL_TO_ANIMATE.appItems.forEach((post) => {
-          post.classList.add("animate_in");
+        EL_TO_ANIMATE.appItems.forEach((app) => {
+          app.classList.add("animate_in");
         });
       }
     });
-  }, APP);
+  }, OPTIONS);
+
+  const CONTACTOBSERVER = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting }) => {
+      if (!isIntersecting) {
+        return;
+      } else {
+        EL_TO_ANIMATE.contactItems.forEach((contact) => {
+          contact.classList.add("animate_in");
+        });
+      }
+    });
+  }, OPTIONS);
 
   FEATUREDOBSERVER.observe(document.querySelector(".featured"));
   TECHNOLOGYOBSERVER.observe(document.querySelector(".technology"));
   APPOBSERVER.observe(document.querySelector(".app"));
+  CONTACTOBSERVER.observe(document.querySelector(".contact"));
 })();
